@@ -1,0 +1,128 @@
+:root {
+    --teal-dark: #1e4d4d;
+    --teal-mid: #2f5d5d;
+    --teal-light: #3d7070;
+    --gold: #f5d97b;
+    --gold-dark: #e5c76b;
+    --gold-darker: #d4ba63;
+    --white: #ffffff;
+    --text-muted: #cbd5e1;
+    --text-dim: #94a3b8;
+    --red: #d63031;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Playfair Display', Georgia, serif;
+    background: var(--teal-dark);
+    color: var(--gold);
+    min-height: 100vh;
+}
+
+/* BUTTONS */
+.btn-main {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 15px;
+    font-family: 'Playfair Display', serif;
+    background: transparent;
+    color: var(--gold) !important;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid var(--gold);
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+.btn-main:hover { opacity: 0.7; }
+
+.btn-small {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 14px;
+    font-family: 'Playfair Display', serif;
+    background: transparent;
+    color: var(--gold) !important;
+    text-decoration: none;
+    font-weight: normal;
+    border: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+    cursor: pointer;
+}
+.btn-small:hover { border-bottom-color: var(--gold); }
+
+.btn-submit {
+    width: 100%;
+    padding: 14px 25px;
+    border-radius: 50px;
+    background: var(--gold-dark);
+    border: none;
+    color: var(--teal-dark) !important;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.25s;
+    margin-top: 8px;
+}
+.btn-submit:hover { background: var(--gold-darker); }
+
+.btn-danger {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 13px;
+    background: transparent;
+    color: #ff7675 !important;
+    border: none;
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    transition: border-color 0.2s;
+    cursor: pointer;
+}
+.btn-danger:hover { border-bottom-color: #ff7675; }
+
+/* WRAPPER / LOGIN */
+.wrapper { height: 100vh; display: flex; justify-content: center; align-items: center; }
+
+.login-box {
+    width: 380px; text-align: center;
+    background: var(--teal-mid); padding: 44px 36px;
+    border-radius: 24px; border: 1px solid rgba(245,217,123,0.12);
+}
+.login-box h1 { margin: 0 0 8px; font-size: 32px; color: var(--gold); }
+.login-tagline { font-family: sans-serif; font-size: 13px; color: var(--text-dim); margin-bottom: 24px; }
+
+.login-box input[type="text"],
+.login-box input[type="password"],
+.login-box input[type="email"] {
+    width: 100%; padding: 14px 20px; margin-bottom: 14px;
+    border-radius: 50px; border: 1.5px solid rgba(245,217,123,0.2);
+    background: rgba(255,255,255,0.07); color: var(--white);
+    font-family: sans-serif; font-size: 14px; outline: none;
+    transition: border 0.25s;
+}
+.login-box input::placeholder { color: var(--text-dim); }
+.login-box input:focus { border-color: rgba(245,217,123,0.6); }
+
+.form-footer { margin-top: 20px; font-family: sans-serif; font-size: 14px; color: var(--text-muted); }
+.form-footer a { color: var(--gold); text-decoration: none; font-weight: bold; border-bottom: 1px solid rgba(245,217,123,0.3); }
+
+.btn-group { display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; }
+
+/* STATUS BADGES */
+.badge { display: inline-block; padding: 4px 12px; border-radius: 50px; font-size: 12px; font-weight: 600; font-family: sans-serif; }
+.badge-pending  { background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+.badge-lunas    { background: rgba(93,202,165,0.15); color: #5dcaa5; border: 1px solid rgba(93,202,165,0.3); }
+.badge-batal    { background: rgba(214,48,49,0.12); color: #ff7675; border: 1px solid rgba(214,48,49,0.25); }
+
+/* ALERT */
+.alert { padding: 14px 20px; border-radius: 12px; font-family: sans-serif; font-size: 14px; margin-bottom: 20px; }
+.alert-success { background: rgba(93,202,165,0.15); color: #5dcaa5; border: 1px solid rgba(93,202,165,0.25); }
+.alert-error   { background: rgba(214,48,49,0.15); color: #ff7675; border: 1px solid rgba(214,48,49,0.25); }
